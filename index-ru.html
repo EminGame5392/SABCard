@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самир Аскеров - Аэрофлот</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Raleway',sans-serif;background:#f5f8fc;color:#fff;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;display:flex;justify-content:flex-end;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);z-index:1000}
+.lang-switch{display:flex;gap:0.5rem}
+.lang-switch a{text-decoration:none;padding:0.4rem 0.8rem;border-radius:20px;background:#0072ce;color:#fff;transition:background 0.3s}
+.lang-switch a:hover{background:#005fa3}
+.hero{min-height:100vh;background:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.4)}
+.hero-content{position:relative;z-index:1;animation:fadeInUp 1.5s ease}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.8rem;margin-bottom:0.5rem}
+.hero h2{font-size:1.2rem;font-weight:400;margin-bottom:2rem}
+.contacts-card{background:rgba(255,255,255,0.9);color:#222;box-shadow:0 8px 30px rgba(0,0,0,0.2);border-radius:20px;padding:1.5rem 2rem;max-width:500px;width:100%;margin:0 auto;animation:fadeInUp 1.5s ease}
+.contacts-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem;color:#0072ce}
+.contact-item{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;font-size:1rem;word-break:break-word}
+.contact-item svg{width:26px;height:26px;flex-shrink:0}
+.contact-item a{text-decoration:none;color:#222;transition:color 0.3s}
+.contact-item a:hover{color:#0072ce}
+@media(max-width:500px){.hero h1{font-size:2rem}.hero h2{font-size:1rem}.contacts-card{padding:1rem}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelectorAll(".lang-switch a").forEach(a=>{
+        a.addEventListener("click",()=>{
+            localStorage.setItem("lang",a.getAttribute("data-lang"))
+        })
+    })
+    const lang=localStorage.getItem("lang")
+    if(lang==="en")window.location.href="index.html"
+})
+</script>
+</head>
+<body>
+<header>
+<div class="lang-switch">
+<a href="index.html" data-lang="en">EN</a>
+<a href="index-ru.html" data-lang="ru">RU</a>
+</div>
+</header>
+<section class="hero">
+<div class="hero-content">
+<h1>Самир Аскеров Азер Оглы</h1>
+<h2>Заместитель директора ДПиУПД по операционному управлению авиакомпании "Аэрофлот"</h2>
+<div class="contacts-card">
+<h2>Контакты</h2>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#0072ce" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.71-.24 1.01l-2.21 2.2z"/></svg>
+<a href="tel:+79663231153">+7(966)323-11-53 (Мобильный)</a>
+</div>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#0072ce" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.71-.24 1.01l-2.21 2.2z"/></svg>
+<a href="tel:+79637542724">+7(963)754-27-24 (Рабочий)</a>
+</div>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#d14836" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 2v.01L12 13 4 6.01V6z"/></svg>
+<a href="mailto:saskerov@aeroflot.ru">saskerov@aeroflot.ru</a>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
