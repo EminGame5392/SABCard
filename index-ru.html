@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самир Аскеров - Аэрофлот</title>
+<link rel="icon" href="/img/aeroflot-logo.jpg" type="img/jpg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Raleway',sans-serif;background:#f5f8fc;color:#fff;overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh}
+header{position:fixed;top:0;width:100%;display:flex;justify-content:flex-end;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);z-index:1000}
+.lang-switch{display:flex;gap:0.5rem}
+.lang-switch a{text-decoration:none;padding:0.4rem 0.8rem;border-radius:20px;background:#0072ce;color:#fff;transition:background 0.3s}
+.lang-switch a:hover{background:#005fa3}
+.hero{flex:1;min-height:100vh;background:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.4)}
+.hero-content{position:relative;z-index:1;animation:fadeInUp 1.5s ease}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.8rem;margin-bottom:0.5rem}
+.hero h2{font-size:1.2rem;font-weight:400;margin-bottom:2rem}
+.contacts-card{background:rgba(255,255,255,0.9);color:#222;box-shadow:0 8px 30px rgba(0,0,0,0.2);border-radius:20px;padding:1.5rem 2rem;max-width:500px;width:100%;margin:0 auto;animation:fadeInUp 1.5s ease}
+.contacts-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem;color:#0072ce}
+.contact-item{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;font-size:1rem;word-break:break-word}
+.contact-item svg{width:26px;height:26px;flex-shrink:0}
+.contact-item a{text-decoration:none;color:#222;transition:color 0.3s}
+.contact-item a:hover{color:#0072ce}
+footer{background:#111;color:#fff;text-align:center;padding:1rem 0}
+.footer-icons{display:flex;justify-content:center;gap:1rem;margin-top:0.5rem}
+.footer-icons a svg{width:28px;height:28px;fill:#fff;transition:fill 0.3s}
+.footer-icons a:hover svg{fill:#0072ce}
+@media(max-width:500px){.hero h1{font-size:2rem}.hero h2{font-size:1rem}.contacts-card{padding:1rem}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelectorAll(".lang-switch a").forEach(a=>{
+        a.addEventListener("click",()=>{
+            localStorage.setItem("lang",a.getAttribute("data-lang"))
+        })
+    })
+    const lang=localStorage.getItem("lang")
+    if(lang==="en")window.location.href="index.html"
+})
+</script>
+</head>
+<body>
+<header>
+<div class="lang-switch">
+<a href="index.html" data-lang="en">EN</a>
+<a href="index-ru.html" data-lang="ru">RU</a>
+</div>
+</header>
+<section class="hero">
+<div class="hero-content">
+<h1>Самир Аскеров Азер Оглы</h1>
+<h2>Заместитель директора ДПиУПД по операционному управлению авиакомпании "Аэрофлот"</h2>
+<div class="contacts-card">
+<h2>Контакты</h2>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#0072ce" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.71-.24 1.01l-2.21 2.2z"/></svg>
+<a href="tel:+79663231153">+7(966)323-11-53 (Мобильный)</a>
+</div>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#0072ce" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.71-.24 1.01l-2.21 2.2z"/></svg>
+<a href="tel:+79637542724">+7(963)754-27-24 (Рабочий)</a>
+</div>
+<div class="contact-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="#d14836" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 2v.01L12 13 4 6.01V6z"/></svg>
+<a href="mailto:saskerov@aeroflot.ru">saskerov@aeroflot.ru</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<p>&copy; GDev. Все права защищены.</p>
+<div class="footer-icons">
+<a href="https://GDevPM.t.me" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.04 15.19L8.85 18c.4 0 .57-.17.78-.38l1.87-1.79 3.88 2.84c.71.39 1.21.19 1.39-.66l2.52-11.87h-.01c.22-1.03-.37-1.43-1.06-1.18L3.27 9.43c-1.02.4-1 1-.17 1.27l3.87 1.21 9.01-5.69c.42-.28.81-.13.49.18"/></svg></a>
+<a href="https://github.com/EminGame5392" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.48c.5.09.68-.22.68-.48v-1.68c-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.83-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2"/></svg></a>
+<a href="https://gdev.pro" target="_blank"><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"><path d="m9.914,13.747l-.363-4.247h1.042l.249,3.183,1.209-2.327,1.209,2.327.247-3.183h1.044l-.363,4.247c-.031.44-.337.779-.706.779-.244,0-.471-.151-.601-.4l-.831-1.6-.831,1.6c-.129.249-.356.4-.601.4-.368,0-.675-.339-.706-.779Zm6.654.779c.244,0,.471-.151.601-.4l.831-1.6.831,1.6c.129.249.356.4.601.4.368,0,.675-.339.706-.779l.363-4.247h-1.044l-.247,3.183-1.209-2.327-1.209,2.327-.249-3.183h-1.042l.363,4.247c.031.44.337.779.706.779Zm-12.706-.779c.031.44.337.779.706.779.244,0,.471-.151.601-.4l.831-1.6.831,1.6c.129.249.356.4.601.4.368,0,.675-.339.706-.779l.363-4.247h-1.044l-.247,3.183-1.209-2.327-1.209,2.327-.249-3.183h-1.042l.363,4.247Zm20.137-1.747c0,6.617-5.383,12-12,12S0,18.617,0,12,5.383,0,12,0s12,5.383,12,12ZM13.238,1.074c1.015,1.143,2.659,3.254,3.73,5.926h4.817c-1.645-3.207-4.813-5.505-8.548-5.926Zm-1.238.135c-.768.803-2.667,2.96-3.889,5.79h7.779c-1.223-2.835-3.121-4.988-3.889-5.79ZM2.214,7h4.817c1.071-2.671,2.715-4.783,3.73-5.926-3.735.421-6.902,2.719-8.548,5.926Zm-1.214,5c0,1.412.277,2.758.764,4h20.472c.487-1.242.764-2.588.764-4s-.277-2.758-.764-4H1.764c-.487,1.242-.764,2.588-.764,4Zm7.111,5c1.223,2.835,3.121,4.988,3.889,5.79.768-.803,2.667-2.96,3.889-5.79h-7.779Zm2.651,5.926c-1.015-1.143-2.659-3.254-3.73-5.926H2.214c1.645,3.207,4.813,5.505,8.548,5.926Zm11.024-5.926h-4.817c-1.071,2.671-2.715,4.783-3.73,5.926,3.735-.421,6.902-2.719,8.548-5.926Z"/></svg></a>
+</div>
+</footer>
+</body>
+</html>
